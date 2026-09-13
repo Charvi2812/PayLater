@@ -10,6 +10,7 @@
 
 The **AI-Powered Responsible BNPL & Financial Wellness System** is a prototype financial decision-support and wellness platform built for the Smart India Hackathon. It evaluates whether a Buy Now, Pay Later (BNPL) purchase is financially safe for a consumer by combining a transparent rule-based risk model, an evolutionary machine learning risk classifier, a Debt-to-Income (DTI) headroom engine, a 0–100 Financial Stress Index, explainable AI recommendation logic, an interactive What-If Simulator, an AI Wellness Assistant, and beginner-friendly financial education in English and Hinglish.
 
+Demo Link: https://pay-later-self.vercel.app/
 ---
 
 ##  Key Innovations & Features
