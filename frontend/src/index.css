@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-slate-100 font-sans antialiased min-h-screen selection:bg-blue-600 selection:text-white;
+    background-color: #091540;
+  }
+}
+
+/* Custom Glassmorphism & Visual Tokens */
+.glass-card {
+  @apply bg-slate-900/70 backdrop-blur-xl border border-slate-800/80 rounded-2xl shadow-xl shadow-black/40;
+}
+
+.glass-card-hover {
+  @apply transition-all duration-300 hover:border-slate-700 hover:bg-slate-900/90 hover:shadow-2xl hover:shadow-blue-900/10 hover:-translate-y-0.5;
+}
+
+.financial-hub-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(96, 165, 250, 0.25), rgba(30, 64, 175, 0.23) 48%, rgba(14, 116, 144, 0.18));
+  border-color: rgba(147, 197, 253, 0.32);
+  box-shadow: 0 20px 48px rgba(2, 6, 23, 0.3), inset 0 1px 0 rgba(219, 234, 254, 0.22);
+  animation: financial-card-float 6s ease-in-out infinite;
+  transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease, background 280ms ease;
+}
+
+.financial-hub-card > * { position: relative; z-index: 1; }
+
+.financial-hub-card:nth-child(2n) { animation-delay: -2s; }
+.financial-hub-card:nth-child(3n) { animation-delay: -4s; }
+
+.financial-hub-card:hover {
+  animation-play-state: paused;
+  transform: translateY(-8px) scale(1.015);
+  border-color: rgba(186, 230, 253, 0.78);
+  background: linear-gradient(145deg, rgba(125, 211, 252, 0.38), rgba(59, 130, 246, 0.32) 50%, rgba(14, 116, 144, 0.25));
+  box-shadow: 0 26px 58px rgba(14, 165, 233, 0.2), inset 0 1px 0 rgba(239, 246, 255, 0.38), 0 0 34px rgba(56, 189, 248, 0.14);
+}
+
+.financial-hub-topic {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: rgba(96, 165, 250, 0.16) !important;
+  transition: transform 220ms ease, background-color 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+  animation: financial-topic-float 5s ease-in-out infinite;
+}
+
+.financial-hub-topic > * { position: relative; z-index: 1; }
+.financial-hub-topic:nth-child(2n) { animation-delay: -1.5s; }
+
+.financial-hub-topic:hover {
+  transform: translateY(-4px);
+  animation-play-state: paused;
+  background-color: rgba(125, 211, 252, 0.28) !important;
+  border-color: rgba(186, 230, 253, 0.7);
+  box-shadow: 0 14px 28px rgba(14, 165, 233, 0.18), inset 0 1px 0 rgba(239, 246, 255, 0.22);
+}
+
+@keyframes financial-card-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes financial-topic-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .financial-hub-card, .financial-hub-topic { animation: none; }
+  .financial-hub-card:hover, .financial-hub-topic:hover { transform: none; }
+}
+
+.pillar-card {
+  animation: pillar-float 4s ease-in-out infinite;
+}
+
+.pillar-card:nth-child(2) { animation-delay: 0.5s; }
+.pillar-card:nth-child(3) { animation-delay: 1s; }
+.pillar-card:nth-child(4) { animation-delay: 1.5s; }
+
+@keyframes pillar-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.repayment-graph-line {
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  animation: draw-repayment-graph 4s ease-in-out infinite;
+}
+
+@keyframes draw-repayment-graph {
+  0% { stroke-dashoffset: 360; opacity: 0.45; }
+  45%, 100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-pink-500 to-purple-600;
+  background-size: 200% auto;
+  animation: gradient-shift 4s ease infinite;
+}
+
+.hero-tagline {
+  display: inline-block;
+  color: #dbeafe;
+  text-shadow: 0 0 18px rgba(96, 165, 250, 0.85);
+  animation: hero-tagline-glow 2.8s ease-in-out infinite;
+}
+
+.hero-type-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  margin-left: 3px;
+  vertical-align: -0.18em;
+  background: #bfdbfe;
+  animation: hero-type-cursor-blink 750ms step-end infinite;
+}
+
+@keyframes hero-type-cursor-blink {
+  50% { opacity: 0; }
+}
+
+@keyframes hero-tagline-glow {
+  0%, 100% { transform: translateY(0); text-shadow: 0 0 12px rgba(96, 165, 250, 0.65); }
+  50% { transform: translateY(-3px); text-shadow: 0 0 30px rgba(125, 211, 252, 1), 0 0 48px rgba(59, 130, 246, 0.55); }
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-border {
+  position: relative;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(to right, #3b82f6, #6366f1, #06b6d4);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}

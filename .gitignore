@@ -1,0 +1,38 @@
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+service-account*.json
+firebase-adminsdk*.json
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.env.local
+
+# Python virtual environments, caches, and local configuration
+backend/venv/
+backend/.venv/
+backend/__pycache__/
+backend/**/*.py[cod]
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.coverage
+
+# Supabase local development data and generated secrets
+supabase/.temp/
+supabase/.branches/
+supabase/.env
+
+# Editor, operating system, and logs
+.vscode/
+.idea/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
