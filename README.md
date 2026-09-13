@@ -8,7 +8,7 @@
 
 > **"We don't just ask whether a user can borrow. We ask whether they can comfortably afford to repay without creating unhealthy financial stress."**
 
-The **AI-Powered Responsible BNPL & Financial Wellness System** is a prototype financial decision-support and wellness platform built for the Smart India Hackathon. It evaluates whether a Buy Now, Pay Later (BNPL) purchase is financially safe for a consumer by combining a transparent rule-based risk model, an evolutionary machine learning risk classifier, a Debt-to-Income (DTI) headroom engine, a 0–100 Financial Stress Index, explainable AI recommendation logic, an interactive What-If Simulator, an AI Wellness Assistant, and beginner-friendly financial education in English and Hinglish.
+The **AI-Powered Responsible BNPL & Financial Wellness System** is a prototype financial decision-support and wellness platform. It evaluates whether a Buy Now, Pay Later (BNPL) purchase is financially safe for a consumer by combining a transparent rule-based risk model, an evolutionary machine learning risk classifier, a Debt-to-Income (DTI) headroom engine, a 0–100 Financial Stress Index, explainable AI recommendation logic, an interactive What-If Simulator, an AI Wellness Assistant, and beginner-friendly financial education in English and Hinglish.
 
 Demo Link: https://pay-later-self.vercel.app/
 ---
@@ -24,8 +24,7 @@ Demo Link: https://pay-later-self.vercel.app/
 7. **Real-time What-If Simulator**: Interactive sliders for Product Price, Monthly Income, and Tenure that instantly update EMI, DTI %, Stress Score, and Recommendation without page reloads.
 8. **AI Financial Wellness Assistant**: Context-aware AI assistant pre-loaded with user assessment details to explain decisions and answer budgeting questions.
 9. **Financial Literacy Hub**: Bite-sized cards explaining DTI, Credit Score, BNPL mechanics vs Credit Cards, and a one-click English / Hinglish toggle.
-10. **SIH Hackathon Demo Loader**: Pre-populated profiles (**Safe 🟢**, **Moderate 🟡**, **High Risk 🔴**) for quick judge demonstrations.
-
+10. 
 ---
 
 .
