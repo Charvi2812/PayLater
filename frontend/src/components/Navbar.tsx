@@ -6,7 +6,7 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-16">
           <div className="flex items-center gap-3">
-            <img src={payLaterLogo} alt="PayLater" className="h-10 w-12 rounded-xl bg-white object-contain p-1 shadow-lg shadow-blue-500/20" />
+            <img src={payLaterLogo} alt="PayLater" className="h-10 w-12 object-contain" />
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-bold text-lg text-white tracking-tight">PayLater</span>

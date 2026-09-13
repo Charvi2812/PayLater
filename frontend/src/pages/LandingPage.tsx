@@ -83,16 +83,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({
     setAuthMessage('Account created. Please confirm your email, then sign in.');
   };
   return (
-    <div className="space-y-20 pb-16">
+    <div
+      className="min-h-screen space-y-20 pb-16 bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: `linear-gradient(rgba(9, 21, 64, 0.18), rgba(9, 21, 64, 0.36)), url(${heroImage})` }}
+    >
       {/* Hero Section */}
-     <section
-  className="relative pt-12 lg:pt-20 overflow-hidden min-h-[700px] lg:min-h-[850px] flex items-center"
-  style={{
-    backgroundImage: `url(${heroImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  }}
->
+     <section className="relative pt-12 lg:pt-20 overflow-hidden min-h-[700px] lg:min-h-[850px] flex items-center">
  {/* Dark gradient overlay — solid near the navbar, fading slightly further down, but staying mostly dark overall */}
 <div className="absolute inset-0 bg-gradient-to-b from-slate-950 from-0% via-slate-950/40 via-[15%] to-slate-950/40" />
         {/* Glow background effects */}

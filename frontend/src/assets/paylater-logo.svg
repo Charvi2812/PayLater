@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 100" role="img" aria-labelledby="title">
   <title id="title">PayLater logo</title>
-  <rect width="128" height="100" rx="8" fill="#a9c6d6"/>
-  <path d="M16 0v100M40 0v100M64 0v100M88 0v100M112 0v100M0 20h128M0 40h128M0 60h128M0 80h128" stroke="#8fb2c4" stroke-width="1"/>
   <g fill="none" stroke="#0f172a" stroke-linecap="round" stroke-linejoin="round" stroke-width="5">
     <path d="M28 43V22l20-9 10 17M49 14l19-8 11 19M69 8l18 3 3 21"/>
     <path d="M22 36h61a10 10 0 0 1 10 10v34a10 10 0 0 1-10 10H22a10 10 0 0 1-10-10V46a10 10 0 0 1 10-10Z" fill="#e9f6fb"/>

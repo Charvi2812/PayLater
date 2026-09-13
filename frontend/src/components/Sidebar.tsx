@@ -22,9 +22,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, onSel
   ];
 
   return (
-    <aside className="sticky top-0 h-screen w-64 shrink-0 overflow-visible bg-[#457B9D] border-r border-white/20 flex flex-col justify-between">
+    <aside className="sticky top-0 h-screen w-64 shrink-0 overflow-visible bg-[#838921] border-r border-[#091540]/25 flex flex-col justify-between text-[#091540]">
       <div>
-        <div className="flex items-center gap-2 border-b border-white/20 px-5 py-4">
+        <div className="flex items-center gap-2 border-b border-[#091540]/20 px-5 py-4">
           <img src={payLaterLogo} alt="PayLater" className="h-8 w-9 rounded-lg object-contain" />
           <span className="font-bold text-[#091540] tracking-tight">PayLater</span>
           <button
@@ -75,7 +75,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, onSel
         </div>
       </div>
 
-      <div className="p-3 border-t border-white/20">
+      <div className="p-3 border-t border-[#091540]/20">
         <button
           onClick={onLogout}
           title="Log Out"

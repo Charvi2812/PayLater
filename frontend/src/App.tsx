@@ -197,7 +197,7 @@ export function App() {
         </button>
       )}
 
-      <div className="flex-1 min-w-0 bg-[#091540]">
+      <div className="app-page-background flex-1 min-w-0">
         <main className="flex-1">
           {activeTab === 'dashboard' && (
             <Dashboard

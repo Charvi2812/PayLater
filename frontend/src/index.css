@@ -16,6 +16,18 @@
   @apply bg-slate-900/70 backdrop-blur-xl border border-slate-800/80 rounded-2xl shadow-xl shadow-black/40;
 }
 
+/* Subtle photographic backdrop for authenticated app pages. */
+.app-page-background {
+  min-height: 100vh;
+  background-color: #20384a;
+  background-image:
+    linear-gradient(rgba(30, 51, 72, 0.62), rgba(45, 67, 82, 0.68)),
+    url('./assets/dashboard-finance-bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .glass-card-hover {
   @apply transition-all duration-300 hover:border-slate-700 hover:bg-slate-900/90 hover:shadow-2xl hover:shadow-blue-900/10 hover:-translate-y-0.5;
 }
