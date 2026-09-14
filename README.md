@@ -33,14 +33,15 @@ Demo Link: https://pay-later-self.vercel.app/
 
 This project is not just a rules-based calculator — it integrates a genuine Scikit-Learn machine learning model into the assessment pipeline, working alongside a deterministic rule engine to produce a more robust risk signal.
 
-How the ML model works
-Aspect	Details
-Algorithm	RandomForestClassifier (Scikit-Learn ensemble method, 50 estimators)
-Task	Binary classification — predicts probability of high-risk / default behavior
-Training data	Synthetically generated dataset (600 samples) modeling realistic income, EMI, credit score, and default-history distributions
-Features	monthly_income, existing_emi, credit_score, defaults, purchase_price, tenure, dti (debt-to-income ratio)
-Output	ml_risk_score — a 0–100 probability score representing likelihood of financial default, returned alongside every assessment
-Location	backend/app/ml/risk_model.py
+**How the ML model works**
+**Aspect	   Details**
+**Algorithm**    RandomForestClassifier (Scikit-Learn ensemble method, 50 estimators)
+**Task**	       Binary classification — predicts probability of high-risk / default behavior
+**Training
+data**	       Synthetically generated dataset (600 samples) modeling realistic income, EMI, credit score, and default-history distributions
+**Features**     monthly_income, existing_emi, credit_score, defaults, purchase_price, tenure, dti (debt-to-income ratio)
+**Output**       ml_risk_score — a 0–100 probability score representing likelihood of financial default, returned alongside every assessment
+**Location**     backend/app/ml/risk_model.py
 
 ## 🛠️ Technology Stack
 
