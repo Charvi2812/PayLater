@@ -33,7 +33,11 @@ Demo Link: https://pay-later-self.vercel.app/
 
 This project is not just a rules-based calculator — it integrates a genuine Scikit-Learn machine learning model into the assessment pipeline, working alongside a deterministic rule engine to produce a more robust risk signal.
 
+
+
 **How the ML model works**
+
+
 **Aspect	   Details**
 **Algorithm**    RandomForestClassifier (Scikit-Learn ensemble method, 50 estimators)
 **Task**	       Binary classification — predicts probability of high-risk / default behavior
