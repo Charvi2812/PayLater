@@ -152,12 +152,12 @@ export const AssessmentResults: React.FC<AssessmentResultsProps> = ({
               <span className="text-base text-slate-500 font-medium ml-1">/ 100</span>
             </div>
             <p className="text-xs font-semibold text-blue-400 mt-2">
-              ML Model Estimate: {result.ml_risk_score ?? result.risk_score}%
+              Credit Default Model Estimate: {result.ml_risk_score ?? result.risk_score}%
             </p>
           </div>
 
           <div className="text-[11px] text-slate-400 text-center">
-            Rule-based baseline + Random Forest classifier.
+            The credit model estimates default probability; BNPL risk and recommendations also use affordability rules.
           </div>
         </div>
 

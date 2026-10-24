@@ -8,6 +8,13 @@ export interface FinancialProfile {
   defaults: number;
   bnpl_purchases_6m: number;
   discretionary_spending: number;
+  age_years?: number;
+  dependents?: number;
+  revolving_utilization?: number;
+  late_30_59?: number | null;
+  late_60_89?: number | null;
+  late_90_plus?: number | null;
+  real_estate_loans?: number;
 }
 
 export interface PurchaseRequest {

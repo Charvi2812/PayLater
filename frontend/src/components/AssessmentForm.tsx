@@ -32,6 +32,13 @@ export const AssessmentForm: React.FC<AssessmentFormProps> = ({
     defaults: 0,
     bnpl_purchases_6m: 2,
     discretionary_spending: 10000,
+    age_years: 35,
+    dependents: 0,
+    revolving_utilization: 0,
+    late_30_59: 0,
+    late_60_89: 0,
+    late_90_plus: 0,
+    real_estate_loans: 0,
   });
 
   const [purchase, setPurchase] = useState<PurchaseRequest>(initialPurchase || {
@@ -332,6 +339,55 @@ export const AssessmentForm: React.FC<AssessmentFormProps> = ({
                     placeholder="0"
                     required
                   />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Age (years)</label>
+                  <input type="number" min="18" max="120" value={profile.age_years ?? 35}
+                    onChange={(e) => setProfile({ ...profile, age_years: parseInt(e.target.value) || 35 })}
+                    className="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition" required />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Financial Dependents</label>
+                  <input type="number" min="0" value={profile.dependents ?? 0}
+                    onChange={(e) => setProfile({ ...profile, dependents: parseInt(e.target.value) || 0 })}
+                    className="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition" required />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Credit Utilization (0–2; 0.5 = 50%)</label>
+                  <input type="number" min="0" max="2" step="0.01" value={profile.revolving_utilization ?? 0}
+                    onChange={(e) => setProfile({ ...profile, revolving_utilization: parseFloat(e.target.value) || 0 })}
+                    className="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition" required />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Payments 30–59 Days Late</label>
+                  <input type="number" min="0" value={profile.late_30_59 ?? 0}
+                    onChange={(e) => setProfile({ ...profile, late_30_59: parseInt(e.target.value) || 0 })}
+                    className="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition" required />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Payments 60–89 Days Late</label>
+                  <input type="number" min="0" value={profile.late_60_89 ?? 0}
+                    onChange={(e) => setProfile({ ...profile, late_60_89: parseInt(e.target.value) || 0 })}
+                    className="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition" required />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Payments 90+ Days Late</label>
+                  <input type="number" min="0" value={profile.late_90_plus ?? 0}
+                    onChange={(e) => setProfile({ ...profile, late_90_plus: parseInt(e.target.value) || 0 })}
+                    className="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition" required />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Real-Estate Loans</label>
+                  <input type="number" min="0" value={profile.real_estate_loans ?? 0}
+                    onChange={(e) => setProfile({ ...profile, real_estate_loans: parseInt(e.target.value) || 0 })}
+                    className="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition" required />
                 </div>
 
                 {/* Average Monthly Discretionary Spending */}

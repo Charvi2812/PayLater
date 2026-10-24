@@ -33,12 +33,13 @@ def run_bnpl_assessment(payload: AssessmentInput) -> AssessmentResult:
     selected_option = next((opt for opt in tenure_options if opt.tenure == purchase.tenure), tenure_options[1])
     current_emi = selected_option.monthly_emi
     
-    # 2. Risk Calculation
+    # 2. Rule-based BNPL risk score remains the primary app-specific decision
+    # input; the trained credit model supplies an additional default estimate.
     risk_res = RiskEngine.calculate_risk(profile, purchase)
     risk_score = risk_res["risk_score"]
     risk_level = risk_res["risk_level"]
-    
-    # 3. ML Risk Model Score prediction
+
+    # 3. Prediction from the trained credit default model.
     ml_score = ml_risk_service.predict_ml_risk_score(profile, purchase)
     
     # 4. Affordability Calculation

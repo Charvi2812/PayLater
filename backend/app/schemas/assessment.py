@@ -11,6 +11,13 @@ class FinancialProfile(BaseModel):
     defaults: int = Field(0, ge=0, description="Number of previous missed payments or defaults")
     bnpl_purchases_6m: int = Field(0, ge=0, description="BNPL purchases in last 6 months")
     discretionary_spending: float = Field(0.0, ge=0, description="Monthly discretionary/lifestyle spending")
+    age_years: int = Field(35, ge=18, le=120, description="Age in years")
+    dependents: int = Field(0, ge=0, description="Number of financial dependents")
+    revolving_utilization: float = Field(0.0, ge=0, description="Credit utilization ratio (for example, 0.5 means 50%)")
+    late_30_59: Optional[int] = Field(None, ge=0, description="Payments 30–59 days late")
+    late_60_89: Optional[int] = Field(None, ge=0, description="Payments 60–89 days late")
+    late_90_plus: Optional[int] = Field(None, ge=0, description="Payments 90 or more days late")
+    real_estate_loans: int = Field(0, ge=0, description="Number of real-estate loans or lines")
 
 class PurchaseRequest(BaseModel):
     product_name: str = Field("Electronics / Consumer Good", description="Product being purchased")
